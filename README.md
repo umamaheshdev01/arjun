@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CMR Cafeteria
+
+A modern web application for managing food orders at CMR College cafeteria. This system allows students to order food from multiple stalls and track their orders in real-time.
+
+## Features
+
+- Three food stalls: Main Canteen, Sandwich Stall, and Fries Stall
+- User authentication for students and stall admins
+- Real-time order tracking
+- Digital receipts and tokens
+- Admin panel for managing orders and inventory
+- Responsive design for all devices
+
+## Tech Stack
+
+- **Frontend**: Next.js 14, React 18, Tailwind CSS
+- **Backend**: Next.js API Routes
+- **Database**: PostgreSQL with Prisma ORM
+- **Authentication**: NextAuth.js
+- **State Management**: React Hooks
+- **Styling**: Tailwind CSS
+
+## Prerequisites
+
+Before you begin, ensure you have installed:
+
+- Node.js 18.x or later
+- npm or yarn
+- PostgreSQL
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/cmr-cafeteria.git
+   cd cmr-cafeteria
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Set up environment variables:
+   ```bash
+   cp .env.example .env.local
+   ```
+   Then, update the environment variables in `.env.local` with your values.
+
+4. Set up the database:
+   ```bash
+   npx prisma migrate dev
+   ```
+
+5. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+6. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+src/
+├── app/                    # Next.js app directory
+│   ├── (auth)/            # Authentication pages
+│   ├── admin/             # Admin dashboard
+│   ├── dashboard/         # User dashboard
+│   ├── menu/              # Menu and ordering
+│   └── track-order/       # Order tracking
+├── components/            # Reusable components
+├── lib/                   # Utility functions and configurations
+│   ├── db/               # Database configurations
+│   └── utils/            # Helper functions
+└── public/               # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributing
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## License
 
-## Learn More
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-To learn more about Next.js, take a look at the following resources:
+## Acknowledgments
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- CMR College for the opportunity to develop this system
+- All contributors who have helped to improve this project
+"# arjun" 
